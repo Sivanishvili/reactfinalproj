@@ -19,8 +19,9 @@ export const Input = ({
         error={Boolean(error)} 
         helperText={error}
         sx={{
-            marginTop: 2,
-            "& fieldset": { borderRadius: '20px',
+            marginTop:2,
+            "& fieldset": {
+                borderRadius: '20px'
             },
         }}
         />
