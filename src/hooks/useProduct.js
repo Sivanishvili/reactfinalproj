@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux"
 
 export const useProduct = () => {
-    const homePageProducts = useSelector(
-        (state) => state.product.homePageProducts
+    const HomePageProducts = useSelector(
+        (state) => state.product.HomePageProducts
     );
 
 
@@ -19,7 +19,7 @@ export const useProduct = () => {
     const singleProduct = useSelector((state) => state.product.singleProduct);
 
     return {
-        homePageProducts,
+        HomePageProducts,
         selectedProduct,
         isProductLoading,
         productCategories,
