@@ -1,8 +1,10 @@
 import React from "react";
-import { HomePageProducts } from "../components/product/homePageProducts";
+import { HomePageProductsomePageProducts } from '../components/product/homePageProducts';
+
+
 
 
 export const HomePage = () => {
-    return <HomePageProducts />
+    return <homePageProducts />
 };
 
