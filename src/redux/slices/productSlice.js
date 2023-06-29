@@ -55,7 +55,7 @@ export const deleteProduct = createAsyncThunk("product/deleteProduct", async (id
 // )
 
 
-export const fetchSingleProduct = createAsyncThunk(
+ export const fetchSingleProduct = createAsyncThunk(
     "product/fetchSingleProduct",
     async ({ id, category}, {rejectWithValue}) => {
         try {

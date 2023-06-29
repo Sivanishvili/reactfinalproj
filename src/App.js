@@ -35,7 +35,7 @@ const  App = () => {
           minHeight: "100%",
           width: "100%",
           pb: 10,
-          backgroundColor: "#f0f0b2",
+          backgroundColor: "#FFFFFF",
         }} 
       >
         <RouteComponent />
