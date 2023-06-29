@@ -1,5 +1,5 @@
 import React from "react"
-import { SingleProduct } from "../components/product/singleProduct/SingleProduct"
+import {SingleProduct} from "../components/product/singleProduct/SingleProduct"
 
 
 

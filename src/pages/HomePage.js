@@ -1,5 +1,5 @@
 import React from "react";
-import { HomePageProductsomePageProducts } from '../components/product/homePageProducts';
+import { HomePageProducts } from "../components/product/homePageProducts";
 
 
 

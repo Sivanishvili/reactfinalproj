@@ -86,7 +86,7 @@ export const productSlice = createSlice({
     initialState: {
         loading: false,
         error: null,
-        HomePageProducts: [],
+        homePageProducts: [],
         selectedProduct: null,
         categories: [],
         singleProduct: {},
@@ -106,7 +106,7 @@ export const productSlice = createSlice({
         
         builder.addCase(fetchHomePageProducts.fulfilled, (state, action)=>{
             state.loading = false;
-            state.HomePageProducts = action.payload.products;
+            state.homePageProducts = action.payload.products;
             state.categories = action.payload.categories;
         });
 

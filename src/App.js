@@ -28,7 +28,8 @@ const  App = () => {
         <Header />
       </Grid>
       <Link to="/product/new" >add Product</Link>
-      <Grid item 
+      <Grid
+       item 
         sx={{
           paddingTop: 20,
           minHeight: "100%",

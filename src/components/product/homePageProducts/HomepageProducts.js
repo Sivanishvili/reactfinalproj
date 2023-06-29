@@ -5,16 +5,14 @@ import { ProductCard } from "../ProductCard";
 
 
 export const HomePageProducts = () => {
-    const {HomePageProducts, isProductLoading} = useProduct();
+    const {homePageProducts, isProductLoading} = useProduct();
     return (
         <LoadingWrapper isProductLoading={isProductLoading} >
             <GridContainer> 
-                {HomePageProducts.map((product) => 
+                {homePageProducts.map((product) => 
                     <ProductCard product={product} key={product._id} 
                     />)} 
             </GridContainer>
         </LoadingWrapper>
     );
 }
-
-

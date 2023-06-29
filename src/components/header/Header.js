@@ -31,6 +31,9 @@ export const Header = () => {
     <Box>
         <StyledAppBar>
             <StyledToolBar>
+                
+                    <h1>Home</h1>
+               
                 <Link to="/">
                     <CiHome  size={30} color="#fff" />
                 </Link>
@@ -44,6 +47,7 @@ export const Header = () => {
                         <UserIcon />
                     </Box>
                 </Box>
+                
             </StyledToolBar>
             <ProductCategories   />
         </StyledAppBar>
