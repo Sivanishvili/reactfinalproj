@@ -18,7 +18,7 @@ export const ProductCategories = () => {
             return(
                 <Link to={`/products/categories/${name}?page=1&sort=price,asc`} >
                     <StyledListItems key={_id} >
-                        <Text color="#FF9900">{name}</Text>
+                        <Text color="#FF9900" >{name}</Text>
                     </StyledListItems>
                 </Link>
             );

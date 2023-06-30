@@ -10,7 +10,7 @@ import { SearchBar } from "./SearchBar";
 
 
 const StyledAppBar = styled(AppBar)(() => ({
-    backgroundColor: "#131921",
+    backgroundColor: "#181717",
     padding: "0 37px 0 30px",
     margin: "0 0 100px"
 }));
@@ -20,7 +20,7 @@ const StyledToolBar = styled(Toolbar)(() => ({
     width: "100%",
     justifyContent: "space-between",
     paddingTop: 8,
-    paddingBottom: 8,
+    paddingBottom: 3,
 }));
 
 
