@@ -5,8 +5,9 @@ import { Link, Text } from "../atoms";
 
 
 const StyledListItems = styled(ListItem)(() => ({
-    padding: "5px 0px 3px 15px",
+    padding: "2px 5px 5px 25px",
     margin: "0px",
+   
 }));
 
 export const ProductCategories = () => {
