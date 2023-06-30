@@ -24,7 +24,7 @@ axiosInstance.interceptors.response.use(
             response.response.status === 401 && 
             response?.response?.data?.message === "token not valid" ) {
                 const refreshToken = localStorage.getItem("refreshToken");
-                axios.post("http://localhost:3001/users/refresh", {
+                axios.post("http://l/users/refresh", {
                     refresh_token: refreshToken,
                 })
                 .then(({ data }) => {

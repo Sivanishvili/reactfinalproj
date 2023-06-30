@@ -8,7 +8,7 @@ export const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
     const {getData, data, loading, setState} = useFetchData();
     const {products} = data;
-  const {searchResults, searchProducts, clearSearchResult} = useProduct()
+  // const {searchResults, searchProducts, clearSearchResult} = useProduct()
 
   useEffect(() => {
     const id = setTimeout(() => {

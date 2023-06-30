@@ -42,15 +42,15 @@ export const deleteProduct = createAsyncThunk("product/deleteProduct", async (id
     } catch (error) {}
 })
 
-export const fetchCategoryProducts = createAsyncThunk(
-    "product/fetchCategoryProducts",
-    async (url) => {
-        try {
-            const {data} = await axiosInstance.get(`/products/categories/${url}`);
-            return data;
-        }catch (error) {}
-    }
-)
+// export const fetchCategoryProducts = createAsyncThunk(
+//     "product/fetchCategoryProducts",
+//     async (url) => {
+//         try {
+//             const {data} = await axiosInstance.get(`/products/categories/${url}`);
+//             return data;
+//         }catch (error) {}
+//     }
+// )
 
 
  export const fetchSingleProduct = createAsyncThunk(

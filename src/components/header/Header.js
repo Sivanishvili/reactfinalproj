@@ -2,7 +2,7 @@ import { AppBar, Toolbar, styled, Box,  } from "@mui/material";
 import { UserIcon } from "./UserIcon";
 import { ProductCategories } from "./ProductCategories";
 import { Button, Link } from "../atoms";
-import {CiHome} from "react-icons/ci"
+// import {CiHome} from "react-icons/ci"
 import {BsFillCartCheckFill} from "react-icons/bs"
 import { useState } from "react";
 import { CartDrawer } from "./CartDrawer";
