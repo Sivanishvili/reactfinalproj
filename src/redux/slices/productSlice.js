@@ -1,6 +1,6 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit"
 import {axiosInstance} from "../../helper"
-import { SingleProduct } from "../../pages";
+// import { SingleProduct } from "../../pages";
 
 
 

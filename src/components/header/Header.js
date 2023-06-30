@@ -32,11 +32,8 @@ export const Header = () => {
         <StyledAppBar>
             <StyledToolBar>
                 
-                  <Link to="/">Home</Link>
+                  <Link to="/">Home </Link>
                
-                <Link to="/">
-                    <CiHome  size={30} color="#FFFFFF" />
-                </Link>
                 <SearchBar />
                 <Box sx={{display: "flex"}} >
 

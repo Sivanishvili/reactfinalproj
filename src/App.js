@@ -8,6 +8,7 @@ import { fetchCart, fetchHomePageProducts } from "./redux";
 import { useDispatch } from "react-redux";
 import { useUser } from "./hooks";
 
+
 const  App = () => {
   const dispatch = useDispatch();
   const {userInfo} = useUser();

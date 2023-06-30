@@ -4,6 +4,6 @@ import {RegisterForm} from "../components/register/RegisterForm"
 
 export const RegisterPage = () => {
     return <div>
-        <RegisterForm>hello register form</RegisterForm>
+        <RegisterForm> Register Form</RegisterForm>
     </div>
 };

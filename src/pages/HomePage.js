@@ -5,6 +5,6 @@ import { HomePageProducts } from "../components/product/homePageProducts";
 
 
 export const HomePage = () => {
-    return <homePageProducts />
+    return < HomePageProducts/>
 };
 

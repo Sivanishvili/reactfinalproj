@@ -4,7 +4,7 @@ import { Button, Text } from "../atoms";
 import { useCart, useUser, } from "../../hooks";
 import { useDispatch } from "react-redux";
 import {clearCart, saveCart} from "../../redux/slices"
-import { clear } from "@testing-library/user-event/dist/clear";
+
 
 const StyledCartItem = styled(Box)(() => ({
   width: 400,
