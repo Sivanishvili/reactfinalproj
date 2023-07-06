@@ -6,16 +6,15 @@ import { useFetchData } from "../../hooks/useFetchData";
 
 export const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
-    const {getData, data, loading, setState} = useFetchData();
-    const {products} = data;
-  // const {searchResults, searchProducts, clearSearchResult} = useProduct()
+  const { getData, data, loading, setState } = useFetchData();
+  const { products } = data;
 
   useEffect(() => {
     const id = setTimeout(() => {
       if (searchValue) {
         getData(`/products/search?name=${searchValue}`);
       } else {
-        setState((prev) => ({...prev, data:[]}));
+        setState((prev) => ({ ...prev, data: [] }));
       }
     }, 1000);
 
@@ -36,14 +35,18 @@ export const SearchBar = () => {
       renderOption={(_, option) => {
         const { name, category, _id, price, image } = option;
         return (
-          <Link
-            to={`/products/categories/${category}/${_id}`}
-            key={_id}
-          >
-            <Box  style={{display: "flex", color: "#ff9988", borderColor: "#ff9988"}} >
-                <img 
-                style={{width: 50, height: 50, objectFit: "cover" }} src={image}
-                />
+          <Link to={`/products/categories/${category}/${_id}`} key={_id}>
+            <Box
+              style={{
+                display: "flex",
+                color: "#ff9988",
+                borderColor: "#ff9988",
+              }}
+            >
+              <img
+                style={{ width: 50, height: 50, objectFit: "cover" }}
+                src={image}
+              />
               <Text>{name}</Text>
               <Text>{price}</Text>
             </Box>
@@ -52,7 +55,7 @@ export const SearchBar = () => {
       }}
       renderInput={(params) => {
         return (
-          <TextField 
+          <TextField
             {...params}
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
@@ -62,10 +65,10 @@ export const SearchBar = () => {
               type: "search",
             }}
             sx={{
-                input: {color: "#ff9900", borderColor: "red"},
+              input: { color: "#ff9900", borderColor: "red" },
             }}
             InputLabelProps={{
-                style: {color: "#FF9900"},
+              style: { color: "#FF9900" },
             }}
           />
         );
