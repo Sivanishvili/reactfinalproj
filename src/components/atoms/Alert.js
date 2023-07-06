@@ -8,7 +8,7 @@ export const Alert = ({ open, handleClose, severity, message }) => {
         horizontal: "right",
       }}
       open={open}
-      autoHideDuration={3000}
+      autoHideDuration={6000}
       onClose={handleClose}
     >
       <MUIAlert onClose={handleClose} severity={severity}>

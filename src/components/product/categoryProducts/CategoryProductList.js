@@ -26,7 +26,9 @@ export const CategoryProductsList = () => {
   const navigate = useNavigate();
 
   const fetchCategoryProducts = () => {
-    getData(`products/categories/${categoryName}?size=1&sort=${sort}&page=${page}`);
+    getData(
+      `products/categories/${categoryName}?size=1&sort=${sort}&page=${page}`
+    );
   };
 
   useEffect(() => {
@@ -35,12 +37,16 @@ export const CategoryProductsList = () => {
 
   const handleSortChange = (newSort) => {
     changeSort("sort", newSort);
-    navigate(`/products/categories/${categoryName}?page=${page}&sort=${newSort}`);
+    navigate(
+      `/products/categories/${categoryName}?page=${page}&sort=${newSort}`
+    );
   };
 
   const handlePageChange = (newPage) => {
     changePage("page", newPage);
-    navigate(`/products/categories/${categoryName}?page=${newPage}&sort=${sort}`);
+    navigate(
+      `/products/categories/${categoryName}?page=${newPage}&sort=${sort}`
+    );
   };
 
   return (
@@ -52,7 +58,11 @@ export const CategoryProductsList = () => {
             return <ProductCard key={product._id} product={product} />;
           })}
         </GridContainer>
-        <Paginate total={totalPages} page={page} changePage={handlePageChange} />
+        <Paginate
+          total={totalPages}
+          page={page}
+          changePage={handlePageChange}
+        />
       </Container>
     </LoadingWrapper>
   );

@@ -1,13 +1,13 @@
 import React from "react";
 import { useProduct } from "../../hooks";
 import { List, ListItem, styled } from "@mui/material";
-import {  Text } from "../atoms";
+import { Text } from "../atoms";
 import { useNavigate } from "react-router-dom";
 
 const StyledListItems = styled(ListItem)(() => ({
   padding: "5px 0px 3px 15px",
   margin: "0px",
-  width: '15%',
+  width: "15%",
 }));
 
 export const ProductCategories = () => {
@@ -16,11 +16,10 @@ export const ProductCategories = () => {
 
   const handleCategoryClick = (name) => {
     navigate(`/products/categories/${name}?page=1&sort=price%2casc,asc`);
-  
   };
 
   return (
-    <List sx={{ display: "flex", width:"600px",cursor:"pointer" }}>
+    <List sx={{ display: "flex", width: "600px", cursor: "pointer" }}>
       {productCategories.map((category) => {
         const { _id, name } = category;
         return (
