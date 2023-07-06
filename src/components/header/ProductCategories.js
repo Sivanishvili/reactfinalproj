@@ -16,6 +16,7 @@ export const ProductCategories = () => {
 
   const handleCategoryClick = (name) => {
     navigate(`/products/categories/${name}?page=1&sort=price%2casc,asc`);
+  
   };
 
   return (

@@ -14,7 +14,8 @@ export const useFetchData = () => {
       setState((prev) => ({ ...prev, loading: true }));
       const { data } = await axiosInstance.get(url);
       setState((prev) => ({ ...prev, loading: false, data }));
-    } catch (error) {
+    }
+     catch (error) {
       setState((prev) => ({ ...prev, loading: false, error: error?.message }));
     }
   };
