@@ -1,12 +1,13 @@
 import React from "react";
 import { useProduct } from "../../hooks";
 import { List, ListItem, styled } from "@mui/material";
-import { Link, Text } from "../atoms";
+import {  Text } from "../atoms";
 import { useNavigate } from "react-router-dom";
 
 const StyledListItems = styled(ListItem)(() => ({
-  padding: "2px 5px 5px 25px",
+  padding: "5px 0px 3px 15px",
   margin: "0px",
+  width: '15%',
 }));
 
 export const ProductCategories = () => {
@@ -18,7 +19,7 @@ export const ProductCategories = () => {
   };
 
   return (
-    <List sx={{ display: "flex" }}>
+    <List sx={{ display: "flex", width:"600px",cursor:"pointer" }}>
       {productCategories.map((category) => {
         const { _id, name } = category;
         return (

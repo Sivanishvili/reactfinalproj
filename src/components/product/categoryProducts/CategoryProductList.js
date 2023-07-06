@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { GridContainer, Loading, LoadingWrapper } from "../../atoms";
+import { useParams, useNavigate } from "react-router-dom";
 import { Box, styled } from "@mui/material";
 import { ProductCard } from "../ProductCard";
 import { useQueryParams } from "../../../hooks";
 import { Paginate } from "./Paginate";
 import { useFetchData } from "../../../hooks/useFetchData";
 import { Sort } from "./Sort";
+import { GridContainer, LoadingWrapper } from "../../atoms";
 
 const Container = styled(Box)(() => ({
   display: "flex",
@@ -23,26 +23,36 @@ export const CategoryProductsList = () => {
   const { getData, loading, data } = useFetchData();
   const { products, totalPages } = data;
 
-  useEffect(() => {
-    getData(
-      `products/categories/${categoryName}?size=1&sort=${sort}&page=${page}`
-    );
-  }, [page, sort]);
+  const navigate = useNavigate();
+
+  const fetchCategoryProducts = () => {
+    getData(`products/categories/${categoryName}?size=1&sort=${sort}&page=${page}`);
+  };
 
   useEffect(() => {
-    changePage("page", 1);
-  }, [sort]);
+    fetchCategoryProducts();
+  }, [categoryName, sort, page]);
+
+  const handleSortChange = (newSort) => {
+    changeSort("sort", newSort);
+    navigate(`/products/categories/${categoryName}?page=${page}&sort=${newSort}`);
+  };
+
+  const handlePageChange = (newPage) => {
+    changePage("page", newPage);
+    navigate(`/products/categories/${categoryName}?page=${newPage}&sort=${sort}`);
+  };
 
   return (
     <LoadingWrapper isLoading={loading}>
       <Container>
-        <Sort sort={sort} changeSort={changeSort} />
+        <Sort sort={sort} changeSort={handleSortChange} />
         <GridContainer>
           {products?.map((product) => {
             return <ProductCard key={product._id} product={product} />;
           })}
         </GridContainer>
-        <Paginate total={totalPages} page={page} changePage={changePage} />
+        <Paginate total={totalPages} page={page} changePage={handlePageChange} />
       </Container>
     </LoadingWrapper>
   );

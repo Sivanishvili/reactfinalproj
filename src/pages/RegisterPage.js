@@ -8,3 +8,6 @@ export const RegisterPage = () => {
     </div>
   );
 };
+
+
+
